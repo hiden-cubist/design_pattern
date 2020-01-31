@@ -1,7 +1,8 @@
 package builder.builder1;
 
-public class Builder {
-    public static void main(String[] args) {
-
-    }
+public abstract class Builder {
+    public abstract void makeTitle(String title);
+    public abstract void makeString(String string);
+    public abstract void makeItems(String[] items);
+    public abstract void close();
 }
