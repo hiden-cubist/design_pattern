@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Factory idCardFactory = new IDCardFactory();
+        IDCardFactory idCardFactory = new IDCardFactory();
 
         Product idCard1 = idCardFactory.create("Adams");
         Product idCard2 = idCardFactory.create("Bob");
@@ -14,7 +14,7 @@ public class Main {
         idCard2.use();
         idCard3.use();
 
-        List<String> owners = ((IDCardFactory) idCardFactory).getOwners();
+        List<String> owners = idCardFactory.getOwners();
 
         for (String owner: owners) {
             System.out.println(owner);

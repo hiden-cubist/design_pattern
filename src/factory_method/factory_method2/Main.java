@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        Factory idCardFactory = new IDCardFactory();
+        IDCardFactory idCardFactory = new IDCardFactory();
 
         Product idCard1 = idCardFactory.create("Adams");
         Product idCard2 = idCardFactory.create("Bob");
@@ -14,7 +14,7 @@ public class Main {
         idCard2.use();
         idCard3.use();
 
-        Map<String, Integer> owners = ((IDCardFactory) idCardFactory).getOwners();
+        Map<String, Integer> owners = idCardFactory.getOwners();
 
         for (Map.Entry<String, Integer> owner : owners.entrySet()) {
             System.out.println(owner.getKey() + "：" + owner.getValue());
